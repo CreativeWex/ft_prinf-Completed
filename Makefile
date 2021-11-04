@@ -1,4 +1,8 @@
 NAME	=	libftprintf.a
+
+SRCS	=	ft_printf.c			ft_integer.c		ft_str_char.c\
+			ft_unsigned_hex.c	ft_unsigned_int.c	ft_void_pointer.c
+
 HEADER	=	ft_printf.h
 OBJ		=	$(SRCS:%.c=%.o)
 
