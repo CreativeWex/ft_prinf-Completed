@@ -29,7 +29,6 @@ void	ft_putchar(char c)
 void ft_c_format(va_list ap, int *count)
 {
     char c;
-
     c = va_arg(ap, int);
     write(1, &c, 1);
     (*count)++;
@@ -41,7 +40,9 @@ void ft_s_format(va_list ap, int *count)
     char *s;
 
     s = va_arg(ap, char *);
-            len = ft_strlen(s);
+    if (s == NULL)
+        s = "(null)";
+    len = ft_strlen(s);
     write(1, s, len);
     *count += len;
 }

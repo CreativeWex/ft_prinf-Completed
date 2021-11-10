@@ -2,4 +2,6 @@
 *.o
 /.idea/*
 .DS_Store
-printfTester/*
+printfTester
+main.c
+a.out
