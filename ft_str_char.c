@@ -1,5 +1,5 @@
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_strlen(const char *s)
 {
@@ -21,7 +21,7 @@ void	ft_putstr(char const *s)
 	write(1, s, ft_strlen(s));
 }
 
-void	ft_putchar_fd(char c)
+void	ft_putchar(char c)
 {
     write(1, &c, 1);
 }
@@ -32,7 +32,7 @@ void ft_c_format(va_list ap, int *count)
 
     c = va_arg(ap, int);
     write(1, &c, 1);
-    (*count++);
+    (*count)++;
 }
 
 void ft_s_format(va_list ap, int *count)
@@ -40,7 +40,7 @@ void ft_s_format(va_list ap, int *count)
     int len;
     char *s;
 
-    s = va_arg(ap, char *)
+    s = va_arg(ap, char *);
             len = ft_strlen(s);
     write(1, s, len);
     *count += len;

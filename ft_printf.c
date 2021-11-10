@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "ft_printf.h"
 
 void ft_check_format(const char *format, int *count, va_list ap)
 {
@@ -9,17 +9,16 @@ void ft_check_format(const char *format, int *count, va_list ap)
     else if (*format == 's')
         ft_s_format(ap, count);
     else if (*format == 'p')
-        ft_p_format(ap, count)
+        ft_p_format(ap, count);
     else if (*format == 'u')
         ft_u_format(ap, count);
     else if (*format == 'x' || *format == 'X')
         ft_x_format(ap, count, *format);
-    else if (*format == '%');
+    else if (*format == '%')
     {
-        write(1, '%', 1);
+        write(1, "%", 1);
         (*count)++;
     }
-    //?
     else
     {
         write(1, format, 1);

@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "ft_printf.h"
 
 void	ft_display_unsigned(unsigned int n, int *count)
 {
@@ -9,7 +9,7 @@ void	ft_display_unsigned(unsigned int n, int *count)
     }
     if (n < 10)
     {
-        ft_putchar_fd(n + 48);
+        ft_putchar(n + 48);
         (*count)++;
     }
 }

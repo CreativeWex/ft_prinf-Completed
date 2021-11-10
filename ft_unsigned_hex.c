@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "ft_printf.h"
 
 void	ft_transfer_to_16cc(unsigned long long int n, int *count, char c)
 {
@@ -10,12 +10,12 @@ void	ft_transfer_to_16cc(unsigned long long int n, int *count, char c)
     if (n > 9 && n < 16) //буква
     {
         if (c == 'x')
-            ft_putchar_fd((n % 10) + 97);
+            ft_putchar((n % 10) + 97);
         else
-            ft_putchar_fd((n % 10) + 65);
+            ft_putchar((n % 10) + 65);
     }
     else // цифра
-        ft_putchar_fd(n + 48);
+        ft_putchar(n + 48);
     (*count)++;
 }
 void ft_x_format(va_list ap, int *count, char c)

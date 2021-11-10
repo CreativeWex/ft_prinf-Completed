@@ -12,10 +12,14 @@ all		:	$(NAME)
 
 $(NAME)	:	$(OBJ) $(HEADER)
 	ar rcs $(NAME) $?
+
 %.o : %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
+
 clean	:
 	@rm -f $(OBJ) $(OBJ_B)
+
 fclean	:	clean
 	@$(RM) $(NAME)
+
 re		:	fclean all
