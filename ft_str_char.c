@@ -1,17 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_char.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jnidorin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/14 16:17:49 by jnidorin          #+#    #+#             */
+/*   Updated: 2021/11/14 16:18:02 by jnidorin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
 int	ft_strlen(const char *s)
 {
-    int	len;
+	int	len;
 
-    len = 0;
-    while (*s)
-    {
-        s++;
-        len++;
-    }
-    return (len);
+	len = 0;
+	while (*s)
+	{
+		s++;
+		len++;
+	}
+	return (len);
 }
 
 void	ft_putstr(char const *s)
@@ -23,26 +34,27 @@ void	ft_putstr(char const *s)
 
 void	ft_putchar(char c)
 {
-    write(1, &c, 1);
+	write(1, &c, 1);
 }
 
-void ft_c_format(va_list ap, int *count)
+void	ft_c_format(va_list ap, int *count)
 {
-    char c;
-    c = va_arg(ap, int);
-    write(1, &c, 1);
-    (*count)++;
+	char	c;
+
+	c = va_arg(ap, int);
+	write(1, &c, 1);
+	(*count)++;
 }
 
-void ft_s_format(va_list ap, int *count)
+void	ft_s_format(va_list ap, int *count)
 {
-    int len;
-    char *s;
+	int		len;
+	char	*s;
 
-    s = va_arg(ap, char *);
-    if (s == NULL)
-        s = "(null)";
-    len = ft_strlen(s);
-    write(1, s, len);
-    *count += len;
+	s = va_arg(ap, char *);
+	if (s == NULL)
+		s = "(null)";
+	len = ft_strlen(s);
+	write(1, s, len);
+	*count += len;
 }
