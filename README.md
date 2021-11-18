@@ -37,9 +37,12 @@ int	ft_printf(const char *format, ...)
 
 ## Context
 
+```c
+int	ft_printf(const char *format, ...)
+```
 **[ flags ] [ width ] [ precision ]**
 
-##Tester
+## Tester
 
 - [ printfTester ](https://github.com/Tripouille/printfTester) (passed) from *Tripouille*
 
