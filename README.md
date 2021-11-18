@@ -50,4 +50,9 @@ int	ft_printf(const char *format, ...)
 - https://man7.org/linux/man-pages/man3/printf.3.html
 - https://opensource.apple.com/source/xnu/xnu-201/osfmk/kern/printf.c.auto.html
 
+<br>
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
  
