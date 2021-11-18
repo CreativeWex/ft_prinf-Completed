@@ -6,6 +6,8 @@ SRCS	=	ft_printf.c			ft_integer.c		ft_str_char.c\
 HEADER	=	ft_printf.h
 OBJ		=	$(SRCS:%.c=%.o)
 
+CFLAGS	=	-Wall -Wextra -Werror
+
 .PHONY	:	all clean fclean re
 
 all		:	$(NAME)
